@@ -1,15 +1,56 @@
-.table-header {
-    /* border: 1px solid red; */
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+/*  home page start  */
+.nav-link {
+  font-size: x-large;
+  color: #333333;
 }
 
-table {
-    border: 1px solid black;
-    width: 100%;
-    /* table-layout: fixed; */
+.home-page-body {
+  background-image: url("/assets/national-parks.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+
 }
 
-th, td {
-    width: fit-content;
+.home-page-main {
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+}
+
+.intro-text {
     text-align: center;
-    word-wrap: break-word;
+    padding: 20px;
+    color: #333333;
+  }
+  .text {
+    margin: 5px 0 5px 0px;
+  }
+  .size-medium {
+    font-size: medium;
+  }
+  .size-large {
+    font-size: Large;
+  }
+  .size-xx-large {
+    font-size: xx-large;
+  }
+
+/* home page end  */
+table {
+  border: 1px solid black;
+  width: 100%;
+  /* table-layout: fixed; */
+}
+
+th,
+td {
+  width: fit-content;
+  text-align: center;
+  word-wrap: break-word;
 }
