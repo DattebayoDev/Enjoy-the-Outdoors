@@ -10,7 +10,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link href="styles.css" rel="stylesheet" />
+    <link href="/styles/styles.css" rel="stylesheet" />
     <link href="mountain_styles.css" rel="stylesheet" />
     <style>
       * {
@@ -19,47 +19,111 @@
         box-sizing: border-box;
       }
 
-      div {
-        border: 1px solid black;
-        margin: 4px;
+      html, body   {
+        background: lightblue;
+        height: 100vh;
       }
 
-      section {
+
+      .card-section {
         display: flex;
-        align-items: center;
+        align-items: end;
+        height: fit-content;
+        border: 1px solid black;
       }
 
-  
+      .card {
+        width: 90%;
+        height: 100%;
+      }
+
+      .video {
+        border: 1px solid rgb(250, 0, 0);
+        width: 100%;
+        height: 200px;
+      }
+
+    #row1-col1 {
+      background-color: blueviolet;
+
+    }
+
+    #row2-col1 {
+      background-color: lightsalmon;
+
+    }
+
+    #row2-col2 {
+      background-color: aquamarine;
+
+    }
+
+    #row2 {
+      height: 90vh;
+    }
     </style>
   </head>
   <body>
     <header>
-      <a href="index.html"> Home </a>
-      <a href="search_page.html"> Search  </a>
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html"> Home </a>
+        </li>
 
-  </header>
+        <li class="nav-item">
+          <a class="nav-link" href="search_page.html"> Search </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="info_page.html"> Info </a>
+        </li>
+      </ul>
+    </header>
     <main>
-      <section>
-        <div id="search-Label">
-          <label> Select an option: </label>
+      <div class="grid">
+        <div class="row" id="row1">
+          <div class="col"  id="row1-col1">
+            <section>
+              <div id="search-Label">
+                <label> Select an option: </label>
+              </div>
+
+              <select id="mountainDropDown">
+                <option>Select One</option>
+              </select>
+            </section>
+          </div>
+        </div>
+        <div class="row" id="row2">
+          <div class="col-8" id="row2-col1">
+            <div><h1>Mountain Name</h1></div>
+          </div>
+          <div class="col-4" id="row2-col2">
+            <section class="card-section">
+              <div class="card">
+                <div class="video">Video</div>
+                <div class="card-body">
+                  <div class="card-title">Title</div>
+                  <div class="card-subtitle">Sub-title</div>
+                  <div class="card-text">
+                    Lorem ipsum odor amet, consectetuer adipiscing elit. Ornare
+                    quisque taciti diam dui per pharetra blandit. Eu pretium
+                    felis parturient facilisi et vivamus adipiscing.
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
         </div>
 
-        <select id="mountainDropDown">
-          <option>Select One</option>
-        </select>
-
-      </section>
-
-      <div id="mountainDisplayDropDown">
-        
+        <!-- <div id="mountainDisplayDropDown"></div> -->
       </div>
     </main>
 
-    <script src="./enjoy-the-outdoors/scripts/locationData.js"></script>
-    <script src="./enjoy-the-outdoors/scripts/parkTypeData.js"></script>
-    <script src="./enjoy-the-outdoors/scripts/nationalParkData.js"></script>
-    <script src="./enjoy-the-outdoors/scripts/mountainData.js"></script>
+    <script src="./scripts/locationData.js"></script>
+    <script src="./scripts/parkTypeData.js"></script>
+    <script src="./scripts/nationalParkData.js"></script>
+    <script src="./scripts/mountainData.js"></script>
 
-    <script src="main.js"></script>
+    <script src="./scripts/main.js"></script>
   </body>
 </html>

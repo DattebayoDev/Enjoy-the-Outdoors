@@ -159,7 +159,7 @@ function searchMountainImage(mountainDisplay, mountainName) {
 function addMountainImage(mountainDisplay, image) {
   const mountainImageDiv = document.createElement("div");
   let imageElement = document.createElement("img");
-  imageElement.src = `./enjoy-the-outdoors/images/${image}`;
+  imageElement.src = `./images/${image}`;
   mountainImageDiv.appendChild(imageElement);
   mountainDisplay.appendChild(mountainImageDiv);
 }
