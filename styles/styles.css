@@ -23,33 +23,54 @@
 }
 
 .intro-text {
-    text-align: center;
-    padding: 20px;
-    color: #333333;
-  }
-  .text {
-    margin: 5px 0 5px 0px;
-  }
-  .size-medium {
-    font-size: medium;
-  }
-  .size-large {
-    font-size: Large;
-  }
-  .size-xx-large {
-    font-size: xx-large;
-  }
-
+  text-align: center;
+  padding: 20px;
+  color: #333333;
+}
+.text {
+  margin: 5px 0 5px 0px;
+}
+.size-medium {
+  font-size: medium;
+}
+.size-large {
+  font-size: Large;
+}
+.size-xx-large {
+  font-size: xx-large;
+}
 /* home page end  */
+
+/* search page begin  */
 table {
-  border: 1px solid black;
   width: 100%;
   /* table-layout: fixed; */
 }
 
 th,
 td {
-  width: fit-content;
   text-align: center;
   word-wrap: break-word;
+}
+
+/* search page end  */
+
+/* mountains page  */
+@media (width <= 375px) {
+  main {
+    margin-left: 0%;
+  }
+
+  body {
+    overflow: hidden;
+  }
+  
+  .card {
+    margin: 0;
+    padding-bottom: 5px;
+    /* border: 1px solid blue; */
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+  }
 }

@@ -1,4 +1,28 @@
 //#region  national park functions
+loadingTableData();
+function loadingTableData() {
+  const tableBody = document.querySelector("tbody");
+  const headers = document.querySelectorAll("th");
+
+  nationalParksArray.forEach((park) => {
+    const row = document.createElement("tr");
+
+    for (header of headers) {
+      if (Object.hasOwn(park, header.id)) {
+        const tableDataCell = document.createElement("td");
+        let headerId = header.id;
+        tableDataCell.textContent = park[headerId] 
+        row.appendChild(tableDataCell);
+      } else {
+        const tableDataCell = document.createElement("td");
+        let headerId = header.id;
+        tableDataCell.textContent = "" 
+        row.appendChild(tableDataCell);
+      }
+      tableBody.appendChild(row);
+    }
+  });
+}
 
 nationalPark_selectDropDown();
 function nationalPark_selectDropDown() {
@@ -58,17 +82,17 @@ function capturingInput(dropDownElement) {
 
 function eraseTableData() {
   const tableBody = document.querySelector("tbody");
-  tableBody.textContent = "";
-  tempTableHeadersObj = {
-    LocationName: "Name",
-    Address: "Address",
-    City: "City",
-    State: "State",
-    ZipCode: "ZipCode",
-    Phone: "Phone",
-    Visit: "Visit",
-  };
-  return tempTableHeadersObj;
+  // tableBody.textContent = "";
+  // tempTableHeadersObj = {
+  //   LocationName: "Name",
+  //   Address: "Address",
+  //   City: "City",
+  //   State: "State",
+  //   ZipCode: "ZipCode",
+  //   Phone: "Phone",
+  //   Visit: "Visit",
+  // };
+  // return tempTableHeadersObj;
 }
 
 function createTableHeaders(obj) {
@@ -102,45 +126,32 @@ function parsingArray(dropDownElement, selectedOption) {
   }
 }
 
-function createTableData(tableHeadersArray, obj) {
-  const tableBody = document.querySelector("tbody");
-  const row = document.createElement("tr");
-  tempArray = Object.keys(tableHeadersArray);
-
-  tempArray.forEach((header) => {
-    const tableDataCell = document.createElement("td");
-    tableDataCell.textContent = Object.hasOwn(obj, header) ? obj[header] : "";
-    row.appendChild(tableDataCell);
-    tableBody.appendChild(row);
-  });
-}
-
 //#endregion
 
 //#region  mountain page
 
-mountains_PopulateDropDown();
-function mountains_PopulateDropDown() {
-  const mountainDropDown = document.getElementById("mountainDropDown");
-  mountainsArray.forEach((element) => {
-    const option = document.createElement("option");
-    option.textContent = element.name;
-    mountainDropDown.appendChild(option);
-  });
-  mountainsDisplayDropDown(mountainDropDown);
-}
+// mountains_PopulateDropDown();
+// function mountains_PopulateDropDown() {
+//   const mountainDropDown = document.getElementById("mountainDropDown");
+//   mountainsArray.forEach((element) => {
+//     const option = document.createElement("option");
+//     option.textContent = element.name;
+//     mountainDropDown.appendChild(option);
+//   });
+//   mountainsDisplayDropDown(mountainDropDown);
+// }
 
 function mountainsDisplayDropDown(dropDownElement) {
-  const mountainDisplay = document.getElementById("mountainDisplayDropDown");
+  // const mountainDisplay = document.getElementById("mountainDisplayDropDown");
   dropDownElement.addEventListener("change", () => {
     if (dropDownElement.value != "Select One") {
-      mountainDisplay.textContent = "";
-      const mountainName = document.createElement("div");
-      mountainName.textContent = "Mountain Name: " + dropDownElement.value;
-      mountainDisplay.appendChild(mountainName);
-      searchMountainImage(mountainDisplay, dropDownElement.value);
+      // mountainDisplay.textContent = "";
+      const mountainName = document.getElementById("mountainName");
+      mountainName.textContent = dropDownElement.value;
+      // mountainDisplay.appendChild(mountainName);
+      // searchMountainImage(mountainDisplay, dropDownElement.value);
     } else {
-      mountainDisplay.textContent = "";
+      // mountainDisplay.textContent = "";
     }
   });
 }
@@ -184,3 +195,5 @@ function addDescription(mountainDisplay, mountain) {
 }
 
 //#endregion
+
+// https://www.youtube.com/shorts/Y1_P-MPp3xI
