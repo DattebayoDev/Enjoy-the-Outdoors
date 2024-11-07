@@ -82,17 +82,6 @@ function capturingInput(dropDownElement) {
 
 function eraseTableData() {
   const tableBody = document.querySelector("tbody");
-  // tableBody.textContent = "";
-  // tempTableHeadersObj = {
-  //   LocationName: "Name",
-  //   Address: "Address",
-  //   City: "City",
-  //   State: "State",
-  //   ZipCode: "ZipCode",
-  //   Phone: "Phone",
-  //   Visit: "Visit",
-  // };
-  // return tempTableHeadersObj;
 }
 
 function createTableHeaders(obj) {
@@ -130,16 +119,16 @@ function parsingArray(dropDownElement, selectedOption) {
 
 //#region  mountain page
 
-// mountains_PopulateDropDown();
-// function mountains_PopulateDropDown() {
-//   const mountainDropDown = document.getElementById("mountainDropDown");
-//   mountainsArray.forEach((element) => {
-//     const option = document.createElement("option");
-//     option.textContent = element.name;
-//     mountainDropDown.appendChild(option);
-//   });
-//   mountainsDisplayDropDown(mountainDropDown);
-// }
+mountains_PopulateDropDown();
+function mountains_PopulateDropDown() {
+  const mountainDropDown = document.getElementById("mountainDropDown");
+  mountainsArray.forEach((element) => {
+    const option = document.createElement("option");
+    option.textContent = element.name;
+    mountainDropDown.appendChild(option);
+  });
+  mountainsDisplayDropDown(mountainDropDown);
+}
 
 function mountainsDisplayDropDown(dropDownElement) {
   // const mountainDisplay = document.getElementById("mountainDisplayDropDown");

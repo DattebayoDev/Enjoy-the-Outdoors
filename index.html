@@ -11,9 +11,19 @@
     />
     <link rel="stylesheet" href="/styles/styles.css" />
     <title>Home Page</title>
+    <style>
+      body {
+        background-color: ivory;
+        /* border: 1px solid black; */
+      }
+
+      .col1 {
+        /* border: 1px solid black; */
+      }
+    </style>
   </head>
   <body>
-    <div class="home-page-body">
+    <div class="sectionOne">
       <header>
         <ul class="nav justify-content-center">
           <li class="nav-item">
@@ -28,15 +38,83 @@
           </li>
         </ul>
       </header>
-      <main class="home-page-main">
-        <div class="intro-text">
-          <div class="text size-large">Discover</div>
-          <div class="text size-xx-large">Random Text</div>
+      <main class="home-page-main mb-5">
+        <div class="homePage-textContainer">
+          <div class="text size-large">Embark on a Journey</div>
+          <div class="text size-xx-large">Explore the Majesty of Mountains</div>
           <div class="text size-medium">
-            Experience various National Parks and Mountians
+            Discover breathtaking National Parks, hidden trails, and nature's wonders. Your adventure begins here.
           </div>
         </div>
       </main>
+    </div>
+    <div class="container footer-container">
+      <footer class="py-3">
+        <div class="row">
+          <div class="col1 col-md-6 pt-3">
+            <p class="footer-text">Home</p>
+            <p class="footer-text">FAQS</p>
+            <p class="footer-text">About</p>
+          </div>
+
+          <div class="col-md-6">
+            <form>
+              <h5>Subscribe to Our Adventure Newsletter</h5>
+              <p>
+                Get a monthly roundup of breathtaking mountain trails, park
+                highlights, and must-see natural wonders.
+              </p>
+
+              <div class="d-flex gap-2">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Email address"
+                />
+                <button class="btn btn-secondary" type="button">
+                  Subscribe
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="d-flex border-top mt-2 py-2">
+          <p class="w-50">© 2024 Company, Inc. All rights reserved.</p>
+          <ul class="w-50 list-unstyled d-flex flex-row-reverse">
+            <li class="ms-3">
+              <a>
+                <img
+                  src="https://cdn-icons-png.flaticon.com/128/4138/4138124.png"
+                  width="28"
+                  height="28"
+                  alt=" Instagram logo"
+                />
+              </a>
+            </li>
+            <li class="ms-3">
+              <a>
+                <img
+                  src="https://cdn-icons-png.flaticon.com/128/5968/5968764.png"
+                  width="24"
+                  height="24"
+                  alt="Facebook logo"
+                />
+              </a>
+            </li>
+            <li class="ms-3">
+              <a>
+                <img
+                  src="https://cdn-icons-png.flaticon.com/128/3046/3046121.png"
+                  width="24"
+                  height="24"
+                  alt="Tiktok logo"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
