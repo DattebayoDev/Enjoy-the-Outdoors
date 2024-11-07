@@ -47,7 +47,9 @@ function selectedArray(radio) {
     radio.id === "location-radio" ? locationsArray : parkTypesArray;
   return selectedArray;
 }
+
 function populateDropDown(radioInput, dropDownID, array) {
+  console.log("working")
   const dropDown = document.getElementById(dropDownID);
   //dropDown.length = 1;
   array.forEach((element) => {
@@ -57,12 +59,14 @@ function populateDropDown(radioInput, dropDownID, array) {
   });
   return { radioInput, dropDown };
 }
+
 function resetDropdown() {
   const allSelect = document.querySelectorAll("select");
   allSelect.forEach((select) => {
     select.classList.add("hide-display");
   });
 }
+
 function displayDropDown(obj) {
   radioInput = obj.radioInput;
   dropDown = obj.dropDown;
@@ -75,44 +79,51 @@ function displayDropDown(obj) {
 function capturingInput(dropDownElement) {
   dropDownElement.addEventListener("change", () => {
     const selectedOption = dropDownElement.value;
-    createTableHeaders(eraseTableData());
+    console.log(selectedOption)
+    console.log("working 2 ")
+    eraseTable()
     parsingArray(dropDownElement, selectedOption);
+
   });
-}
-
-function eraseTableData() {
-  const tableBody = document.querySelector("tbody");
-}
-
-function createTableHeaders(obj) {
-  const values = Object.values(obj);
-  const tableHeader = document.querySelector("thead");
-  tableHeader.textContent = "";
-
-  values.forEach((value) => {
-    const header = document.createElement("th");
-    header.textContent = value;
-    tableHeader.appendChild(header);
-  });
-  return values;
 }
 
 function parsingArray(dropDownElement, selectedOption) {
-  eraseTableData();
-  let tableHeadersArray = eraseTableData();
   if (dropDownElement.id === "location-DropDown") {
+    console.log("working 3 ")
     nationalParksArray.forEach((state) => {
       if (selectedOption === state.State) {
-        createTableData(tableHeadersArray, state);
+        createTableData(state);
       }
     });
   } else {
     nationalParksArray.forEach((park) => {
       if (park.LocationName.includes(selectedOption)) {
-        createTableData(tableHeadersArray, park);
-      }
+        createTableData(park);      }
     });
   }
+}
+
+function createTableData(obj) {
+  const tableBody = document.querySelector("tbody");
+  const row = document.createElement("tr");
+  const tableHeaders = document.querySelectorAll("th")
+
+  tableHeaders.forEach((header) => {
+    // console.log("header", header.id)
+    // console.log("object header", obj[header.id])
+
+
+    const tableDataCell = document.createElement("td");
+    let tempVariable = Object.hasOwn(obj,  header.id) ? obj[ header.id] : "";
+    tableDataCell.textContent = tempVariable
+    row.appendChild(tableDataCell);
+    tableBody.appendChild(row);
+  });
+}
+
+function eraseTable() {
+  const tableBody = document.querySelector("tbody");
+  tableBody.textContent = ""
 }
 
 //#endregion
