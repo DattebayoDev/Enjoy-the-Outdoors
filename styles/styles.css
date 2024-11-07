@@ -3,6 +3,17 @@
   margin: 0px;
   box-sizing: border-box;
 }
+
+header {
+  margin: 0 auto;
+  /* border-bottom: solid 1px black; */
+  background-color: ivory;
+}
+
+.searchMain {
+  background-color: ivory;
+
+}
 /*  home page start  */
 .nav-link {
   font-size: x-large;
@@ -46,7 +57,6 @@
 }
 
 @media (width <= 375px) {
-
   .sectionOne {
     background-image: url("/assets/national-parks.jpg");
     background-size: cover;
@@ -62,18 +72,49 @@
   .size-xx-large {
     font-size: 5vw;
   }
-
-
-
 }
-
 
 /* home page end  */
 
 /* search page begin  */
+
+.searchBackground {
+  /* background-image: url("/assets/blur-background.jpg"); */
+  /* background-color: green; */
+  /* background-size: contain; */
+  color: #333;
+}
+
 table {
   width: 100%;
   /* table-layout: fixed; */
+}
+
+/* .blur-container {
+  backdrop-filter: blur(5px);
+  padding: 5px;
+  border-radius: 10px;
+} */
+
+.table th {
+  /* background-color: transparent;  */
+  color: #333;
+}
+
+.table td {
+  /* background-color: transparent;  */
+  color: #333;
+
+}
+
+section {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.hide-display {
+  display: none;
 }
 
 th,
@@ -93,7 +134,7 @@ td {
   /* body {
     overflow: hidden;
   } */
-  
+
   .card {
     margin: 0;
     padding-bottom: 5px;

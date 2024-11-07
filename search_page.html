@@ -10,122 +10,95 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link href="/styles/styles.css" rel="stylesheet" />
+    <link href="./styles/styles.css" rel="stylesheet" />
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+      #searchImage {
+        height: 300px;
+        max-width: 100%;
+        border: 1px solid black;
       }
 
-      section {
-        display: flex;
-        align-items: center;
-        border-radius: 10px;
-      }
-
-      .hide-display {
-        display: none;
-      }
-
-      body {
-        background-image: url("assets/blur-background.jpg");
-        background-size: contain;
-        color: #333;
-
-      }
-
-
-      .blur-container {
-        backdrop-filter: blur(5px);
-        padding: 5px;
-        border-radius: 10px;
-      }
-
-      .table th {
-        background-color: transparent; 
-        color: #333;
-
-
-      }
-
-      .table td {
-        background-color: transparent; 
-        color: #333;
-
+      #searchImage img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
       }
     </style>
   </head>
   <body>
-    <header>
-      <ul class="nav justify-content-center">
-        <li class="nav-item">
-          <a class="nav-link active" href="index.html"> Home </a>
-        </li>
+    <div class="searchBackground">
+      <header>
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html"> Home </a>
+          </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="search_page.html"> Search </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="info_page.html"> Info </a>
-        </li>
-      </ul>
-    </header>
-    <main>
-      <section class="container mt-3">
-        <div id="search-Label">
-          <label class="me-2"> Search By: </label>
+          <li class="nav-item">
+            <a class="nav-link" href="search_page.html"> Search </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="info_page.html"> Info </a>
+          </li>
+        </ul>
+      </header>
+      <main class="searchMain">
+        <div id="searchImage">
+          <img class="img img-fluid" src="/assets/tableImage5.jpg" />
         </div>
+        <section class="container mt-3">
+          <div id="search-Label">
+            <label class="me-2"> Search By: </label>
+          </div>
 
-        <div class="me-3" id="radio-Container">
-          <div>
-            <input
-              class="form-check-input"
-              name="radio-Btn"
-              type="radio"
-              id="location-radio"
-            />
-            <label class="form-check-label" for="location-radio">
-              Location
-            </label>
+          <div class="me-3" id="radio-Container">
+            <div>
+              <input
+                class="form-check-input"
+                name="radio-Btn"
+                type="radio"
+                id="location-radio"
+              />
+              <label class="form-check-label" for="location-radio">
+                Location
+              </label>
+            </div>
+            <div>
+              <input
+                class="form-check-input"
+                name="radio-Btn"
+                type="radio"
+                id="parkType-radio"
+              />
+              <label class="form-check-label" for="parkType-radio">
+                Park Type</label
+              >
+            </div>
           </div>
-          <div>
-            <input
-              class="form-check-input"
-              name="radio-Btn"
-              type="radio"
-              id="parkType-radio"
-            />
-            <label class="form-check-label" for="parkType-radio">
-              Park Type</label
-            >
-          </div>
+
+          <select class="form-select hide-display w-50" id="location-DropDown">
+            <option>Select One</option>
+          </select>
+
+          <select class="form-select hide-display w-50" id="parkType-DropDown">
+            <option>Select One</option>
+          </select>
+        </section>
+        <div class="table-responsive mx-3 mt-3 blur-container">
+          <table class="table table-hover table-bordered">
+            <thead>
+              <th id="LocationName">Name</th>
+              <th id="Address">Address</th>
+              <th id="City">City</th>
+              <th id="State">State</th>
+              <th id="ZipCode">ZipCode</th>
+              <th id="Phone">Phone</th>
+              <th id="Visit">Visit</th>
+            </thead>
+            <tbody class="t-body table-group-divider"></tbody>
+          </table>
         </div>
-
-        <select class="form-select hide-display w-50" id="location-DropDown">
-          <option>Select One</option>
-        </select>
-
-        <select class="form-select hide-display w-50" id="parkType-DropDown">
-          <option>Select One</option>
-        </select>
-      </section>
-      <div class="table-responsive mx-3 mt-3 blur-container">
-        <table class="table table-hover table-bordered">
-          <thead>
-            <th id="LocationName">Name</th>
-            <th id="Address">Address</th>
-            <th id="City">City</th>
-            <th id="State">State</th>
-            <th id="ZipCode">ZipCode</th>
-            <th id="Phone">Phone</th>
-            <th id="Visit">Visit</th>
-          </thead>
-          <tbody class="t-body table-group-divider"></tbody>
-        </table>
-      </div>
-    </main>
-
+      </main>
+    </div>
     <script src="./scripts/locationData.js"></script>
     <script src="./scripts/parkTypeData.js"></script>
     <script src="./scripts/nationalParkData.js"></script>

@@ -13,52 +13,62 @@
     <link href="/styles/styles.css" rel="stylesheet" />
     <!-- <link href="mountain_styles.css" rel="stylesheet" /> -->
     <style>
-
-      .card {
-        width: 40vw;
-        height: 60vh;
-        border: 1px solid blue;
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        color: white;
       }
 
+      .info-body {
+        background-image: url("./assets/practice_img.jpg");
+        background-size: cover;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      main{
+        margin-left: 6%;
+
+      }
+      .card {
+        width: 30vw;
+        height: 50vh;
+        margin-left: 10%;
+        /* border: 1px solid blue; */
+        background-color: transparent;
+        color: white;
+        border: 0;
+      }
       .card-text {
-        height: 15vh;
+        text-align: left;
+        height: 10vh;
+        width: 25vw;
         overflow: scroll;
       }
 
-      #mountainImage { 
-        height: 60%;
-        width: 100%;
-        object-fit: cover;
-      }
-
-      .card-body {
-        height: 60%;
+      .video {
+        background-color: azure;
+        /* border: 1px solid rgb(250, 0, 0); */
+        height: 30vh;
       }
 
       #col1 {
-        border: 1px solid black;
+        margin-top: 5%;
+        margin-left: 2.5%;
+        /* border: 1px solid black; */
       }
       #col2 {
         display: flex;
-        align-items: center;
-        border: 1px solid brown;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: calc(100vh - 52px);
+        padding-bottom: 5px;
       }
 
-      #mountainName {
-        margin-left: 5%;
-      
-        font-size: 5vw;
+      #mountainName, #searchLabel {
+        font-size: 6vw;
         text-wrap: nowrap;
-      }
-
-      .hideDisplay{
-        display: none;
-      }
-
-      .infoPageSection {
-        margin-left: 5%;
-        display: flex;
-        align-items: center;
       }
     </style>
   </head>
@@ -79,10 +89,10 @@
     </header>
     <main>
       <div class="vh-100 d-flex">
-        <div class="container col-5" id="col1">
-          <section class="mt-5 infoPageSection">
+        <div class="container-fluid col-6" id="col1">
+          <section class="d-flex justify-content-left mt-3">
             <div id="searchLabel">
-              <p class="fs-4 m-0 me-2">Select an option:</p>
+              <p class="fs-6 me-2">Select an option:</p>
             </div>
             <select
               class="form-select form-select-sm h-75 w-50"
@@ -91,15 +101,18 @@
               <option>Select One</option>
             </select>
           </section>
-          <div class="hideDisplay mt-3" id="mountainName"><p>Mountain Name</p></div>
+          <div id="mountainName"><p>Mountain Name</p></div>
         </div>
-        <div class="col-7" id="col2">
-          <div class="hideDisplay card">
-            <img class="card-img" id="mountainImage">
+        <div class="col-6" id="col2">
+          <div class="card mb-3">
+            <div class="video">Video</div>
             <div class="card-body">
-              <div class="card-title" id="elevationInfo">Title</div>
-              <div class="card-text" id="mountainDesc">
-                
+              <div class="card-title">Title</div>
+              <div class="card-subtitle">Sub-title</div>
+              <div class="card-text">
+                Lorem ipsum odor amet, consectetuer adipiscing elit. Ornare
+                quisque taciti diam dui per pharetra blandit. Eu pretium felis
+                parturient facilisi et vivamus adipiscing.
               </div>
             </div>
           </div>

@@ -122,67 +122,55 @@ function parsingArray(dropDownElement, selectedOption) {
 mountains_PopulateDropDown();
 function mountains_PopulateDropDown() {
   const mountainDropDown = document.getElementById("mountainDropDown");
-  console.log(mountainsArray)
   mountainsArray.forEach((element) => {
     const option = document.createElement("option");
     option.textContent = element.name;
     mountainDropDown.appendChild(option);
-    console.log(option)
   });
   mountainsDisplayDropDown(mountainDropDown);
 }
 
 function mountainsDisplayDropDown(dropDownElement) {
-  // const mountainDisplay = document.getElementById("mountainDisplayDropDown");
   dropDownElement.addEventListener("change", () => {
     if (dropDownElement.value != "Select One") {
-      // mountainDisplay.textContent = "";
       const mountainName = document.getElementById("mountainName");
       mountainName.textContent = dropDownElement.value;
-      // mountainDisplay.appendChild(mountainName);
-      // searchMountainImage(mountainDisplay, dropDownElement.value);
-    } else {
-      // mountainDisplay.textContent = "";
-    }
+      searchMountainImage(mountainName.textContent)
+    } 
   });
 }
 
-function searchMountainImage(mountainDisplay, mountainName) {
-  let image;
+function searchMountainImage(mountainName) {
+  console.log(mountainName)
   mountainsArray.forEach((mountain) => {
     if (mountain.name === mountainName) {
-      image = mountain.img;
-      addMountainImage(mountainDisplay, image);
-      addMountainattr(mountainDisplay, mountain);
-      addDescription(mountainDisplay, mountain);
+      addMountainImage(mountain.img);
+      addMountainattr(mountain);
+      addDescription(mountain);
     }
   });
 }
-function addMountainImage(mountainDisplay, image) {
-  const mountainImageDiv = document.createElement("div");
-  let imageElement = document.createElement("img");
+function addMountainImage(image) {
+  let imageElement = document.getElementById("mountainImage");
   imageElement.src = `./images/${image}`;
-  mountainImageDiv.appendChild(imageElement);
-  mountainDisplay.appendChild(mountainImageDiv);
+  changeDisplay()
+ 
 }
 
-function addMountainattr(mountainDisplay, mountain) {
-  const attrDiv = document.createElement("div");
-  const elevationInfo = document.createElement("div");
-  const effortInfo = document.createElement("div");
-  elevationInfo.textContent = "Elevation: " + mountain.elevation;
-  effortInfo.textContent = "Effort: " + mountain.effort;
-  elevationInfo.classList = "card-details";
-  effortInfo.classList = "card-details";
-  attrDiv.appendChild(elevationInfo);
-  attrDiv.appendChild(effortInfo);
-  mountainDisplay.appendChild(attrDiv);
+function changeDisplay(){
+  const hideDisplayElements = document.querySelectorAll(".hideDisplay")
+  hideDisplayElements.forEach(element => {
+    element.classList.remove("hideDisplay")
+  })
+}
+function addMountainattr(mountain) {
+  const mountainInfo = document.getElementById("elevationInfo");
+  mountainInfo.innerHTML = "Elevation: " + mountain.elevation + "&emsp;" +  "Effort: " + mountain.effort
 }
 
-function addDescription(mountainDisplay, mountain) {
-  const description = document.createElement("div");
+function addDescription(mountain) {
+  const description = document.getElementById("mountainDesc");
   description.textContent = mountain.desc;
-  mountainDisplay.appendChild(description);
 }
 
 //#endregion
