@@ -122,10 +122,12 @@ function parsingArray(dropDownElement, selectedOption) {
 mountains_PopulateDropDown();
 function mountains_PopulateDropDown() {
   const mountainDropDown = document.getElementById("mountainDropDown");
+  console.log(mountainsArray)
   mountainsArray.forEach((element) => {
     const option = document.createElement("option");
     option.textContent = element.name;
     mountainDropDown.appendChild(option);
+    console.log(option)
   });
   mountainsDisplayDropDown(mountainDropDown);
 }
