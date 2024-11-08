@@ -94,6 +94,6 @@ document
 
   document.getElementById("switchInput").addEventListener("click", (event) => {
     if (event.target.checked) {  
-      window.location.href = "info_page.html"; 
+      window.location.href = "mountains.html"; 
     }
   });
