@@ -1,0 +1,310 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+  }
+  
+  header {
+    margin: 0 auto;
+    /* border-bottom: solid 1px black; */
+    background-color: ivory;
+  }
+  
+  .searchMain {
+    background-color: ivory;
+  
+  }
+  /*  home page start  */
+  .nav-link {
+    font-size: x-large;
+    color: #333333;
+  }
+  
+  .sectionOne {
+    background-image: url("/assets/national-parks.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+  }
+  
+  .home-page-main {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+  }
+  
+  .homePage-textContainer {
+    text-align: center;
+    padding: 20px;
+    color: #333333;
+    /* border: 1px solid black; */
+  }
+  .text {
+    margin: 5px 0 5px 0px;
+  }
+  .size-medium {
+    font-size: medium;
+  }
+  .size-large {
+    font-size: Large;
+  }
+  .size-xx-large {
+    font-size: xx-large;
+  }
+  
+  .footer-text {
+    width: fit-content;
+  }
+  
+  @media (width <= 375px) {
+    .sectionOne {
+      background-image: url("/assets/national-parks.jpg");
+      background-size: cover;
+      /* background-repeat: no-repeat; */
+      height: 100vh;
+    }
+    .size-medium {
+      font-size: 3vw;
+    }
+    .size-large {
+      font-size: 4vw;
+    }
+    .size-xx-large {
+      font-size: 5vw;
+    }
+  }
+  
+  /* home page end  */
+  
+  /* national parks begin  */
+  
+  .searchBackground {
+    /* background-image: url("/assets/blur-background.jpg"); */
+    /* background-color: green; */
+    /* background-size: contain; */
+    color: #333;
+  }
+  
+  table {
+    width: 100%;
+    /* table-layout: fixed; */
+  }
+  
+  /* .blur-container {
+    backdrop-filter: blur(5px);
+    padding: 5px;
+    border-radius: 10px;
+  } */
+  
+  .table th {
+    /* background-color: transparent;  */
+    color: #333;
+  }
+  
+  .table td {
+    /* background-color: transparent;  */
+    color: #333;
+  
+  }
+  
+  section {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+  }
+  
+  .hide-display {
+    display: none;
+  }
+  
+  th,
+  td {
+    text-align: center;
+    word-wrap: break-word;
+  }
+  
+  #searchImage {
+    height: 300px;
+    max-width: 100%;
+    border: 1px solid black;
+  }
+  
+  #searchImage img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  #radio-Container * {
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+  }
+  
+  /*  end  */
+  
+  /* mountains page begin  */
+  @media (width <= 375px) {
+    main {
+      margin-left: 0%;
+    }
+  
+    /* body {
+      overflow: hidden;
+    } */
+  
+    .card {
+      margin: 0;
+      padding-bottom: 5px;
+      /* border: 1px solid blue; */
+      background-color: transparent;
+      color: white;
+      font-weight: bold;
+    }
+  }
+  
+  .card {
+    width: 40vw;
+    height: 70vh;
+    /* border: 1px solid blue; */
+  }
+  
+  .card-text {
+    height: 30vh;
+    overflow: scroll;
+  }
+  
+  #mountainImage { 
+    height: 60%;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .card-body {
+    height: 100%;
+  }
+  
+  #col1 * {
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid black; */
+  }
+  
+  #col2 {
+    display: flex;
+    align-items: center;
+    height: 60%;
+    /* border: 1px solid brown; */
+  }
+  
+  #mountainName {
+    font-size: 5vw;
+    text-wrap: nowrap;
+    padding: 5%;
+    width: 50%;
+  }
+  
+  .hideDisplay{
+    display: none;
+  }
+  
+  #infoPageSection {
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+    /* background-color: ivory; */
+    /* border: 1px solid black; */
+    border-radius: 10px;
+  
+  }
+  #info-main {
+    /* background-color: ivory; */
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #switchInput {
+    width: fit-content;
+  }
+  
+  
+  
+  
+  .card {
+    margin-top: 25%;
+    width: 40vw;
+    height: 30vh;
+    color: rgb(255, 255, 255);
+
+    /* border: 1px solid blue; */
+  }
+
+  .card-text {
+    height: 20vh;
+    overflow: scroll;
+  }
+
+  /* #mountainImage {
+    height: 60%;
+    width: 100%;
+    object-fit: cover;
+  } */
+
+  .card-body {
+    height: 60%;
+  }
+
+  #col1 * {
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid black; */
+  }
+
+  #col2 {
+    display: flex;
+    /* align-items: center; */
+    color: white;
+    /* border: 1px solid brown; */
+  }
+  
+  #mountainName {
+    font-size: 6vw;
+    text-wrap: nowrap;
+    padding: 5%;
+    width: 50%;
+  }
+
+  .hideDisplay {
+    display: none;
+  }
+
+  #infoPageSection {
+    color: white;
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+    /* background-color: ivory; */
+    /* border: 1px solid black; */
+
+  }
+  #info-main * {
+    /* border: 1px solid black; */
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #switchInput {
+    width: fit-content;
+  }
+
+  #info-body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    min-width: 100vw;
+  }

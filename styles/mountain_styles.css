@@ -1,9 +1,0 @@
-#mountainDisplayDropDown {
-    display: flex;
-    flex-direction: column;
-}
-
-.card-details {
-    display: inline-block;
-    width: fit-content;
-}

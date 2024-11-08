@@ -56,8 +56,9 @@ function addDescription(mountain) {
 // const SEARCH_ENGINE_ID = "625dddd791a9b4de3"; // Replace with your Search Engine ID
 // const GOOGLE_API_KEY = "AIzaSyDQLSeWIZViPgx4BpZwwTxE537zISitSZI"; // Replace with your API key v1
 // const GOOGLE_API_KEY = "AIzaSyBtMl6o8eWFYXMS8Z3LZx8gq4lzMSK1tZk"; // Replace with your API key v2
+// const GOOGLE_API_KEY = "AIzaSyDa9AoFrsmbljSTFg648pZS2i32IcjKKTA"; // Replace with your API key v2
 
-const GOOGLE_API_KEY = "AIzaSyDQLSeWIZViPgx4BpZwwTxE537zISitSZI"; 
+const GOOGLE_API_KEY = "AIzaSyDa9AoFrsmbljSTFg648pZS2i32IcjKKTA"; 
 const SEARCH_ENGINE_ID = "625dddd791a9b4de3"; // Replace with your Search Engine ID
 
 document

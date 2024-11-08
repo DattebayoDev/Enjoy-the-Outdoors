@@ -60,7 +60,7 @@ document.getElementById("switchInput").addEventListener("click", (event) => {
   if (event.target.checked) {
     console.log("working 2")
 
-    window.location.href = "info_page_version2.html"; // Replace with your target page
+    window.location.href = "mountains2.html"; // Replace with your target page
   }
 });
 //#endregion
