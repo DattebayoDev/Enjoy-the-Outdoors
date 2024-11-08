@@ -123,6 +123,23 @@ td {
   word-wrap: break-word;
 }
 
+#searchImage {
+  height: 300px;
+  max-width: 100%;
+  border: 1px solid black;
+}
+
+#searchImage img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#radio-Container * {
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center;
+}
 /* search page end  */
 
 /* mountains page  */

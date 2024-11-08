@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link href="/styles/styles.css" rel="stylesheet" />
+    <!-- <link href="mountain_styles.css" rel="stylesheet" /> -->
+    <style>
+      .card {
+        width: 40vw;
+        height: 60vh;
+        /* border: 1px solid blue; */
+      }
+
+      .card-text {
+        height: 15vh;
+        overflow: scroll;
+      }
+
+      #mountainImage { 
+        height: 60%;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .card-body {
+        height: 60%;
+      }
+
+      #col1 * {
+        display: flex;
+        justify-content: center;
+        /* border: 1px solid black; */
+      }
+
+      #col2 {
+        display: flex;
+        align-items: center;
+        /* border: 1px solid brown; */
+      }
+
+      #mountainName {
+        font-size: 5vw;
+        text-wrap: nowrap;
+        padding: 5%;
+        width: 50%;
+      }
+
+      .hideDisplay{
+        display: none;
+      }
+
+      #infoPageSection {
+        margin-left: 5%;
+        display: flex;
+        align-items: center;
+        background-color: ivory;
+        /* border: 1px solid black; */
+        border-radius: 10px;
+
+      }
+      #info-main {
+        background-color: ivory;
+      }
+      .main {
+        display: flex;
+        flex-direction: column;
+      }
+
+      #switchInput {
+        width: fit-content;
+      }
+    </style>
+  </head>
+  <body class="info-body">
+    <header>
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html"> Home </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="search_page.html"> National Parks </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="info_page.html"> Mountain Info </a>
+        </li>
+      </ul>
+    </header>
+    <main id="info-main" class="border-bottom">
+      <div id="searchImage">
+        <img class="img img-fluid" src="/assets/tableImage6.jpg" />
+      </div>
+      <div class="container vh-100 main">
+        <div id="col1">
+          <section class="mt-3" id="infoPageSection">
+            <div id="searchLabel">
+              <p class="fs-4 m-0 me-2">Select an option:</p>
+            </div>
+            <select
+              class="form-select form-select-sm h-75 w-50"
+              id="mountainDropDown"
+            >
+              <option>Select One</option>
+            </select>        
+            <div class="form-check form-switch ms-2" id="switchInput">
+              <input class="form-check-input" type="checkbox">
+              <label class="form-check-label ms-2">Switch</label>
+            </div>
+          </section>
+  
+        </div>
+        <div class="mt-5" id="col2">
+          <div class="hideDisplay" id="mountainName"><p>Mountain Name</p></div>
+          <div class="hideDisplay card">
+            <img class="card-img" id="mountainImage">
+            <div class="card-body">
+              <div class="card-title" id="elevationInfo">Title</div>
+              <div class="card-text" id="mountainDesc">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="container footer-container">
+      <footer class="py-3">
+        <div class="row">
+          <div class="col1 col-md-6 pt-3">
+            <p class="footer-text">Home</p>
+            <p class="footer-text">FAQS</p>
+            <p class="footer-text">About</p>
+          </div>
+
+          <div class="col-md-6">
+            <form>
+              <h5>Subscribe to Our Adventure Newsletter</h5>
+              <p>
+                Get a monthly roundup of breathtaking mountain trails, park
+                highlights, and must-see natural wonders.
+              </p>
+
+              <div class="d-flex gap-2">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Email address"
+                />
+                <button class="btn btn-secondary" type="button">
+                  Subscribe
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="d-flex border-top mt-2 py-2">
+          <p class="w-50">© 2024 Company, Inc. All rights reserved.</p>
+          <ul class="w-50 list-unstyled d-flex flex-row-reverse">
+            <li class="ms-3">
+              <a>
+                <img
+                  src="https://cdn-icons-png.flaticon.com/128/4138/4138124.png"
+                  width="28"
+                  height="28"
+                  alt=" Instagram logo"
+                />
+              </a>
+            </li>
+            <li class="ms-3">
+              <a>
+                <img
+                  src="https://cdn-icons-png.flaticon.com/128/5968/5968764.png"
+                  width="24"
+                  height="24"
+                  alt="Facebook logo"
+                />
+              </a>
+            </li>
+            <li class="ms-3">
+              <a>
+                <img
+                  src="https://cdn-icons-png.flaticon.com/128/3046/3046121.png"
+                  width="24"
+                  height="24"
+                  alt="Tiktok logo"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./scripts/locationData.js"></script>
+    <script src="./scripts/parkTypeData.js"></script>
+    <script src="./scripts/nationalParkData.js"></script>
+    <script src="./scripts/mountainData.js"></script>
+    <script src="./scripts/mountains.js"></script>
+  </body>
+</html>
+
+
+

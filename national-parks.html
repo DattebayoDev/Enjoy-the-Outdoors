@@ -23,6 +23,8 @@
         width: 100%;
         object-fit: cover;
       }
+
+  
     </style>
   </head>
   <body>
@@ -41,35 +43,35 @@
           </li>
         </ul>
       </header>
-      <main class="searchMain">
+      <main class="searchMain border-bottom">
         <div id="searchImage">
           <img class="img img-fluid" src="/assets/tableImage5.jpg" />
         </div>
         <section class="container mt-3">
           <div id="search-Label">
-            <label class="me-2"> Search By: </label>
+            <label class="fs-4 me-4"> Search By: </label>
           </div>
 
           <div class="me-3" id="radio-Container">
             <div>
               <input
-                class="form-check-input"
+                class="form-check-input me-2"
                 name="radio-Btn"
                 type="radio"
                 id="location-radio"
               />
-              <label class="form-check-label" for="location-radio">
+              <label class="form-check-label fs-4" for="location-radio">
                 Location
               </label>
             </div>
             <div>
               <input
-                class="form-check-input"
+                class="form-check-input me-2"
                 name="radio-Btn"
                 type="radio"
                 id="parkType-radio"
               />
-              <label class="form-check-label" for="parkType-radio">
+              <label class="form-check-label fs-4" for="parkType-radio">
                 Park Type</label
               >
             </div>
@@ -98,12 +100,79 @@
           </table>
         </div>
       </main>
+      <div class="container footer-container">
+        <footer class="py-3">
+          <div class="row">
+            <div class="col1 col-md-6 pt-3">
+              <p class="footer-text">Home</p>
+              <p class="footer-text">FAQS</p>
+              <p class="footer-text">About</p>
+            </div>
+  
+            <div class="col-md-6">
+              <form>
+                <h5>Subscribe to Our Adventure Newsletter</h5>
+                <p>
+                  Get a monthly roundup of breathtaking mountain trails, park
+                  highlights, and must-see natural wonders.
+                </p>
+  
+                <div class="d-flex gap-2">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Email address"
+                  />
+                  <button class="btn btn-secondary" type="button">
+                    Subscribe
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+  
+          <div class="d-flex border-top mt-2 py-2">
+            <p class="w-50">© 2024 Company, Inc. All rights reserved.</p>
+            <ul class="w-50 list-unstyled d-flex flex-row-reverse">
+              <li class="ms-3">
+                <a>
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/128/4138/4138124.png"
+                    width="28"
+                    height="28"
+                    alt=" Instagram logo"
+                  />
+                </a>
+              </li>
+              <li class="ms-3">
+                <a>
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/128/5968/5968764.png"
+                    width="24"
+                    height="24"
+                    alt="Facebook logo"
+                  />
+                </a>
+              </li>
+              <li class="ms-3">
+                <a>
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/128/3046/3046121.png"
+                    width="24"
+                    height="24"
+                    alt="Tiktok logo"
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </div>
     </div>
     <script src="./scripts/locationData.js"></script>
     <script src="./scripts/parkTypeData.js"></script>
     <script src="./scripts/nationalParkData.js"></script>
     <script src="./scripts/mountainData.js"></script>
-
-    <script src="./scripts/main.js"></script>
+    <script src="./scripts/national-parks.js"></script>
   </body>
 </html>
