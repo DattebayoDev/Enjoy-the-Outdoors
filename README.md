@@ -40,14 +40,20 @@ This web application provides information on national parks and mountains, allow
 1. Select a mountain from the dropdown menu.
 2. Information, including image, elevation, and description, displays once a mountain is selected.
 
+![Mountain Page Screenshot](assets/page-screenshots/mountains-page.png)
+
 ### **National Parks Page:**
 1. Choose a filter option: location or park type.
 2. Select an option from the dropdown to filter parks, and the table updates automatically.
+
+![National Parks Page Screenshot](assets/page-screenshots/national-parks-page.png)
 
 ### **Search Page:**
 1. Select a mountain from the dropdown.
 2. The page dynamically retrieves an image of the selected mountain using an API.
 3. Toggle the switch input to navigate back to the main mountain page (`mountains.html`).
+
+![Search Page Screenshot](assets/page-screenshots/mountains-page2.png)
 
 ## **Functions**
 ### **Mountain Page**

@@ -1,0 +1,171 @@
+/* CSS reset */
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+/* Header */
+header {
+  /* border-bottom: solid 1px black; */
+  background-color: ivory;
+}
+
+.nav-link {
+  font-size: x-large;
+  color: #333333;
+}
+
+/* mountains page 2 begin  */
+
+.card {
+  width: 40vw;
+  height: 70vh;
+  /* border: 1px solid blue; */
+}
+
+.card-text {
+  height: 30vh;
+  overflow: scroll;
+}
+
+#mountainImage {
+  height: 60%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-body {
+  height: 100%;
+}
+
+#col1 * {
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid black; */
+}
+
+#col2 {
+  display: flex;
+  align-items: center;
+  height: 60%;
+  /* border: 1px solid brown; */
+}
+
+#mountainName {
+  font-size: 5vw;
+  text-wrap: nowrap;
+  padding: 5%;
+  width: 50%;
+}
+
+.hideDisplay {
+  display: none;
+}
+
+#infoPageSection {
+  margin-left: 5%;
+  display: flex;
+  align-items: center;
+  /* background-color: ivory; */
+  /* border: 1px solid black; */
+  border-radius: 10px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+#switchInput {
+  width: fit-content;
+}
+
+.card {
+  margin-top: 25%;
+  width: 40vw;
+  height: 30vh;
+  color: rgb(255, 255, 255);
+
+  /* border: 1px solid blue; */
+}
+
+.card-text {
+  height: 30vh;
+  overflow: scroll;
+}
+
+.card-body {
+  height: 60%;
+}
+
+#col1 * {
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid black; */
+}
+
+#col2 {
+  display: flex;
+  /* align-items: center; */
+  color: white;
+  /* border: 1px solid brown; */
+}
+
+#mountainName {
+  font-size: 6vw;
+  text-wrap: nowrap;
+  padding: 5%;
+  width: 50%;
+}
+
+.hideDisplay {
+  display: none;
+}
+
+#infoPageSection {
+  color: white;
+  margin-left: 5%;
+  display: flex;
+  align-items: center;
+  /* background-color: ivory; */
+  /* border: 1px solid black; */
+}
+#info-main * {
+  /* border: 1px solid black; */
+}
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+#switchInput {
+  width: fit-content;
+}
+
+#info-body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+@media (width <= 375px) {
+    main {
+      margin-left: 0%;
+    }
+  
+    /* body {
+        overflow: hidden;
+      } */
+  
+    .card {
+      margin: 0;
+      padding-bottom: 5px;
+      /* border: 1px solid blue; */
+      background-color: transparent;
+      color: white;
+      font-weight: bold;
+    }
+  }
