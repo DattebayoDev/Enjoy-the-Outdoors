@@ -1,26 +1,23 @@
+/* CSS reset */
 * {
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
 }
 
+/* Header */
 header {
-  margin: 0 auto;
   /* border-bottom: solid 1px black; */
   background-color: ivory;
 }
 
-.searchMain {
-  background-color: ivory;
-
-}
-/*  home page start  */
 .nav-link {
   font-size: x-large;
   color: #333333;
 }
 
-.sectionOne {
+/*  home page start  */
+.section-one {
   background-image: url("/assets/national-parks.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -33,43 +30,48 @@ header {
   margin-top: 5%;
 }
 
-.homePage-textContainer {
+.home-page-text-container {
   text-align: center;
   padding: 20px;
   color: #333333;
   /* border: 1px solid black; */
 }
+
 .text {
   margin: 5px 0 5px 0px;
 }
-.size-medium {
+
+.font-medium {
   font-size: medium;
 }
-.size-large {
+
+.font-large {
   font-size: Large;
 }
-.size-xx-large {
+
+.font-xx-large {
   font-size: xx-large;
 }
 
+/* Footer */
 .footer-text {
   width: fit-content;
 }
 
 @media (width <= 375px) {
-  .sectionOne {
+  .section-one {
     background-image: url("/assets/national-parks.jpg");
     background-size: cover;
     /* background-repeat: no-repeat; */
     height: 100vh;
   }
-  .size-medium {
+  .font-medium {
     font-size: 3vw;
   }
-  .size-large {
+  .font-large {
     font-size: 4vw;
   }
-  .size-xx-large {
+  .font-xx-large {
     font-size: 5vw;
   }
 }
