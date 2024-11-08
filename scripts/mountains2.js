@@ -53,14 +53,13 @@ function addDescription(mountain) {
   description.textContent = mountain.desc;
 }
 
-// const SEARCH_ENGINE_ID = "625dddd791a9b4de3"; // Replace with your Search Engine ID
-// const GOOGLE_API_KEY = "AIzaSyDQLSeWIZViPgx4BpZwwTxE537zISitSZI"; // Replace with your API key v1
-// const GOOGLE_API_KEY = "AIzaSyBtMl6o8eWFYXMS8Z3LZx8gq4lzMSK1tZk"; // Replace with your API key v2
-// const GOOGLE_API_KEY = "AIzaSyDa9AoFrsmbljSTFg648pZS2i32IcjKKTA"; // Replace with your API key v2
+// const SEARCH_ENGINE_ID = "625dddd791a9b4de3";  
+// const GOOGLE_API_KEY = "AIzaSyDQLSeWIZViPgx4BpZwwTxE537zISitSZI";  
+// const GOOGLE_API_KEY = "AIzaSyBtMl6o8eWFYXMS8Z3LZx8gq4lzMSK1tZk";  
+// const GOOGLE_API_KEY = "AIzaSyDa9AoFrsmbljSTFg648pZS2i32IcjKKTA"; 
 
 const GOOGLE_API_KEY = "AIzaSyDa9AoFrsmbljSTFg648pZS2i32IcjKKTA"; 
-const SEARCH_ENGINE_ID = "625dddd791a9b4de3"; // Replace with your Search Engine ID
-
+const SEARCH_ENGINE_ID = "625dddd791a9b4de3"; 
 document
   .getElementById("mountainDropDown")
   .addEventListener("change", async () => {
@@ -72,12 +71,12 @@ document
       const searchUrl = `https://www.googleapis.com/customsearch/v1?key=${GOOGLE_API_KEY}&cx=${SEARCH_ENGINE_ID}&q=${encodeURIComponent("Mountain " + mountainName
       )}+site:unsplash.com&searchType=image&num=1`;
 
-      console.log("Fetching from URL:", searchUrl); // Log the search URL
+      console.log("Fetching from URL:", searchUrl); 
 
       const response = await fetch(searchUrl);
       const data = await response.json();
 
-      console.log("API response:", data); // Log the response data to inspect
+      console.log("API response:", data); 
 
       if (data.items && data.items.length > 0) {
         const imageUrl = data.items[0].link;
@@ -94,10 +93,7 @@ document
   });
 
   document.getElementById("switchInput").addEventListener("click", (event) => {
-    console.log("working")
-    if (event.target.checked) {
-      console.log("working 2")
-  
-      window.location.href = "info_page.html"; // Replace with your target page
+    if (event.target.checked) {  
+      window.location.href = "info_page.html"; 
     }
   });

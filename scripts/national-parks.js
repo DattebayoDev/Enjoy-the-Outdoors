@@ -1,22 +1,22 @@
-
-loadingTableData();
-function loadingTableData() {
+//#region  national park functions
+loadTableData();
+function loadTableData() {
   const tableBody = document.querySelector("tbody");
   const headers = document.querySelectorAll("th");
 
   nationalParksArray.forEach((park) => {
     const row = document.createElement("tr");
 
-    for (header of headers) {
+    for (const header of headers) {
       if (Object.hasOwn(park, header.id)) {
         const tableDataCell = document.createElement("td");
         let headerId = header.id;
-        tableDataCell.textContent = park[headerId] 
+        tableDataCell.textContent = park[headerId];
         row.appendChild(tableDataCell);
       } else {
         const tableDataCell = document.createElement("td");
         let headerId = header.id;
-        tableDataCell.textContent = "" 
+        tableDataCell.textContent = "";
         row.appendChild(tableDataCell);
       }
       tableBody.appendChild(row);
@@ -24,40 +24,39 @@ function loadingTableData() {
   });
 }
 
-nationalPark_selectDropDown();
-function nationalPark_selectDropDown() {
+initializeDropdown();
+function initializeDropdown() {
   const allRadios = document.querySelectorAll("input[type='radio']");
   allRadios.forEach((radio) => {
     radio.addEventListener("click", () => {
       resetDropdown();
-      displayDropDown(
-        populateDropDown(radio, selectedDropdown(radio), selectedArray(radio))
+      displayDropdown(
+        populateDropdown(radio, getDropdownID(radio), getArray(radio))
       );
     });
   });
 }
 
-function selectedDropdown(radio) {
-  const selectedDropdown =
+function getDropdownID(radio) {
+  const dropdownID =
     radio.id === "location-radio" ? "location-DropDown" : "parkType-DropDown";
-  return selectedDropdown;
+  return dropdownID;
 }
-function selectedArray(radio) {
-  const selectedArray =
+function getArray(radio) {
+  const array =
     radio.id === "location-radio" ? locationsArray : parkTypesArray;
-  return selectedArray;
+  return array;
 }
 
-function populateDropDown(radioInput, dropDownID, array) {
-  console.log("working")
-  const dropDown = document.getElementById(dropDownID);
-  //dropDown.length = 1;
+function populateDropdown(radioInput, dropdownID, array) {
+  console.log("working");
+  const dropdown = document.getElementById(dropdownID);
   array.forEach((element) => {
     const option = document.createElement("option");
     option.textContent = element;
-    dropDown.appendChild(option);
+    dropdown.appendChild(option);
   });
-  return { radioInput, dropDown };
+  return { radioInput, dropdown };
 }
 
 function resetDropdown() {
@@ -67,62 +66,57 @@ function resetDropdown() {
   });
 }
 
-function displayDropDown(obj) {
+function displayDropdown(obj) {
   radioInput = obj.radioInput;
-  dropDown = obj.dropDown;
+  dropdown = obj.dropdown;
   const activeDropdown = radioInput.checked
-    ? dropDown.classList.remove("hide-display")
-    : dropDown.classList.add("hide-display");
-  capturingInput(dropDown);
+    ? dropdown.classList.remove("hide-display")
+    : dropdown.classList.add("hide-display");
+  captureInput(dropdown);
 }
 
-function capturingInput(dropDownElement) {
-  dropDownElement.addEventListener("change", () => {
-    const selectedOption = dropDownElement.value;
-    console.log(selectedOption)
-    console.log("working 2 ")
-    eraseTable()
-    parsingArray(dropDownElement, selectedOption);
-
+function captureInput(dropdownElement) {
+  dropdownElement.addEventListener("change", () => {
+    const selectedOption = dropdownElement.value;
+    console.log(selectedOption);
+    console.log("working 2");
+    clearTable();
+    parseArray(dropdownElement, selectedOption);
   });
 }
 
-function parsingArray(dropDownElement, selectedOption) {
-  if (dropDownElement.id === "location-DropDown") {
-    console.log("working 3 ")
+function parseArray(dropdownElement, selectedOption) {
+  if (dropdownElement.id === "location-DropDown") {
+    console.log("working 3");
     nationalParksArray.forEach((state) => {
       if (selectedOption === state.State) {
-        createTableData(state);
+        createTableRow(state);
       }
     });
   } else {
     nationalParksArray.forEach((park) => {
       if (park.LocationName.includes(selectedOption)) {
-        createTableData(park);      }
+        createTableRow(park);
+      }
     });
   }
 }
 
-function createTableData(obj) {
+function createTableRow(obj) {
   const tableBody = document.querySelector("tbody");
   const row = document.createElement("tr");
-  const tableHeaders = document.querySelectorAll("th")
+  const tableHeaders = document.querySelectorAll("th");
 
   tableHeaders.forEach((header) => {
-    // console.log("header", header.id)
-    // console.log("object header", obj[header.id])
-
-
     const tableDataCell = document.createElement("td");
-    let tempVariable = Object.hasOwn(obj,  header.id) ? obj[ header.id] : "";
-    tableDataCell.textContent = tempVariable
+    let tempVariable = Object.hasOwn(obj, header.id) ? obj[header.id] : "";
+    tableDataCell.textContent = tempVariable;
     row.appendChild(tableDataCell);
     tableBody.appendChild(row);
   });
 }
 
-function eraseTable() {
+function clearTable() {
   const tableBody = document.querySelector("tbody");
-  tableBody.textContent = ""
+  tableBody.textContent = "";
 }
-
