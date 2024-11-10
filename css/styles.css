@@ -18,7 +18,7 @@ header {
 
 /*  home page start  */
 .section-one {
-  background-image: url("/assets/national-parks.jpg");
+  background-image: url("../assets/national-parks.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
